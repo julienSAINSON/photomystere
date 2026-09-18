@@ -99,6 +99,9 @@ export function createUi(appElement, game) {
     appElement
       .querySelector("[data-action='return-editor']")
       ?.addEventListener("click", returnToEditor);
+    appElement
+      .querySelector("[data-action='enter-fullscreen']")
+      ?.addEventListener("click", requestFullscreen);
 
     if (currentView === "game") {
       setupReveal(state);
@@ -756,6 +759,9 @@ export function createUi(appElement, game) {
             data-role="reveal-canvas"
             aria-label="${getCanvasLabel(state.phase)}"
           ></canvas>
+          <button class="fullscreen-action" type="button" data-action="enter-fullscreen">
+            Plein écran
+          </button>
           <p class="timer" aria-live="polite">
             <span class="timer-label">${getGameStateLabel(state.phase)}</span>
             <strong class="timer-value" data-role="timer">${formatTime(

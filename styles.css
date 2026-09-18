@@ -384,6 +384,22 @@ h1 {
   pointer-events: none;
 }
 
+.fullscreen-action {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  left: 12px;
+  min-height: 36px;
+  border: 1px solid rgb(255 253 247 / 72%);
+  border-radius: 4px;
+  padding: 6px 8px;
+  background: rgb(33 52 48 / 62%);
+  color: #fffdf7;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
 .timer-label {
   font-family: "Trebuchet MS", sans-serif;
   font-size: 0.65rem;
