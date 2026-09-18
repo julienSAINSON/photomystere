@@ -1,0 +1,711 @@
+:root {
+  color-scheme: light;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f4f0e5;
+  color: #213430;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f4f0e5;
+  background-image: radial-gradient(#d9cdb8 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  display: grid;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.screen {
+  width: min(100%, 520px);
+  margin: auto;
+}
+
+.welcome-screen {
+  align-self: center;
+}
+
+.session-form {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0 0;
+  border: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.session-form > label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.session-form select,
+.session-form input {
+  width: 100%;
+  min-height: 56px;
+  border: 2px solid #213430;
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: #fffdf7;
+  color: #213430;
+  font: inherit;
+}
+
+.session-message {
+  margin: 0;
+  border-left: 4px solid #2e7892;
+  padding-left: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.random-action {
+  border-style: dashed;
+}
+
+.editor-screen {
+  display: grid;
+  gap: 20px;
+  padding: 8px 0 28px;
+}
+
+.editor-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.editor-header h1 {
+  font-size: clamp(2rem, 9vw, 3.5rem);
+}
+
+.editor-header .secondary-action {
+  width: auto;
+  flex: 0 0 auto;
+  padding: 0 14px;
+}
+
+.editor-status,
+.editor-message {
+  margin: 0;
+  font-family: "Trebuchet MS", sans-serif;
+  line-height: 1.5;
+}
+
+.editor-message {
+  border-left: 4px solid #2e7892;
+  padding-left: 12px;
+  font-weight: 700;
+}
+
+.editor-form {
+  display: grid;
+  gap: 18px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.editor-form > label,
+.zone-editor > label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.editor-form input:not([type="file"]),
+.editor-form select,
+.editor-form textarea {
+  width: 100%;
+  min-height: 56px;
+  border: 2px solid #213430;
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: #fffdf7;
+  color: #213430;
+  font: inherit;
+}
+
+.editor-form input[type="file"] {
+  min-height: 56px;
+  padding: 10px 0;
+  font: inherit;
+}
+
+.editor-form textarea {
+  min-height: 112px;
+  resize: vertical;
+}
+
+.zone-editor {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  border: 3px solid #213430;
+  padding: 16px;
+}
+
+.zone-editor legend {
+  padding: 0 6px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.zone-editor p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.zone-point-count {
+  color: #a64b2a;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.zone-editor-canvas {
+  display: block;
+  width: 100%;
+  max-height: 62vh;
+  touch-action: none;
+  border: 2px solid #213430;
+  background: #e7a84b;
+}
+
+.editor-actions {
+  display: grid;
+  gap: 12px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #a64b2a;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 12vw, 4.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+}
+
+.intro,
+.hint {
+  max-width: 28rem;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.intro {
+  margin: 24px 0 32px;
+}
+
+.mode-control {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.mode-control select {
+  width: 100%;
+  min-height: 56px;
+  border: 2px solid #213430;
+  border-radius: 6px;
+  padding: 0 12px;
+  background: #fffdf7;
+  color: #213430;
+  font: inherit;
+}
+
+.players-control {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 16px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.players-control textarea {
+  width: 100%;
+  min-height: 96px;
+  resize: vertical;
+  border: 2px solid #213430;
+  border-radius: 6px;
+  padding: 12px;
+  background: #fffdf7;
+  color: #213430;
+  font: inherit;
+}
+
+.primary-action,
+.secondary-action {
+  width: 100%;
+  min-height: 56px;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.primary-action {
+  background: #d85d35;
+  color: #fffdf7;
+  box-shadow: 4px 4px 0 #213430;
+}
+
+.primary-action:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #213430;
+}
+
+.game-screen {
+  display: grid;
+  align-content: center;
+  gap: 16px;
+}
+
+.app-shell:fullscreen {
+  padding: 16px;
+  background: #f4f0e5;
+}
+
+.app-shell:fullscreen .game-screen {
+  width: 100%;
+  min-height: 100%;
+}
+
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game-header .eyebrow {
+  margin: 0;
+}
+
+.current-player {
+  margin: 4px 0 0;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.score-summary {
+  text-align: right;
+}
+
+.score {
+  margin: 0 0 4px;
+  border: 2px solid #213430;
+  padding: 6px 10px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.best-score {
+  margin: 0;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.players-score {
+  display: grid;
+  gap: 4px;
+  margin: -12px 0 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.players-score li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #a9b2a8;
+  padding: 7px 0;
+}
+
+.players-score li span {
+  overflow-wrap: anywhere;
+}
+
+.players-score .is-current {
+  color: #a64b2a;
+  font-weight: 700;
+}
+
+.timer {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  gap: 2px;
+  justify-items: end;
+  align-items: center;
+  min-height: 0;
+  margin: 0;
+  border: 1px solid rgb(255 253 247 / 72%);
+  border-radius: 4px;
+  padding: 6px 8px;
+  background: rgb(33 52 48 / 62%);
+  color: #fffdf7;
+  pointer-events: none;
+}
+
+.timer-label {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.timer-value {
+  color: inherit;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.photo-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+}
+
+.photo-canvas {
+  display: block;
+  width: 100%;
+  border: 3px solid #213430;
+  background: #e7a84b;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.app-shell:fullscreen .photo-stage {
+  max-height: calc(100vh - 32px);
+}
+
+.app-shell:fullscreen .photo-canvas {
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 32px);
+}
+
+.app-shell:fullscreen .game-prompt {
+  display: none;
+}
+
+.game-prompt {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.is-answering .photo-canvas {
+  border-color: #2e7892;
+}
+
+.hint {
+  margin: 12px 0 0;
+  color: #586761;
+}
+
+.hint-control {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+  border-left: 4px solid #e7a84b;
+  padding-left: 12px;
+}
+
+.hint-control .eyebrow {
+  margin: 0;
+}
+
+.progressive-hints {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.progressive-hints li {
+  display: grid;
+  gap: 2px;
+  color: #213430;
+  font-family: "Trebuchet MS", sans-serif;
+  line-height: 1.5;
+}
+
+.progressive-hints strong {
+  color: #a64b2a;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.answer-form {
+  display: grid;
+  gap: 10px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: 700;
+}
+
+.answer-modal {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(33 52 48 / 58%);
+}
+
+.answer-dialog {
+  position: relative;
+  width: min(100%, 440px);
+  border: 3px solid #213430;
+  padding: 28px 20px 20px;
+  background: #fffdf7;
+  box-shadow: 6px 6px 0 #213430;
+}
+
+.answer-dialog h2 {
+  margin: 0 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.75rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #213430;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.answer-controls {
+  display: grid;
+  gap: 12px;
+}
+
+.answer-form input {
+  width: 100%;
+  min-height: 56px;
+  border: 2px solid #213430;
+  border-radius: 6px;
+  padding: 0 14px;
+  background: #fffdf7;
+  color: #213430;
+  font: inherit;
+  font-size: 1rem;
+}
+
+.answer-feedback {
+  margin: 0;
+  color: #a64b2a;
+  line-height: 1.4;
+}
+
+.answer-result {
+  border: 3px solid #213430;
+  padding: 20px;
+  background: #fffdf7;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.answer-result h2,
+.answer-result p {
+  margin: 0;
+}
+
+.answer-result h2 {
+  margin-bottom: 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.75rem;
+}
+
+.round-score {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px !important;
+  border-top: 1px solid #a9b2a8;
+  padding-top: 12px;
+}
+
+.round-score span {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.round-score strong {
+  color: #a64b2a;
+  font-size: 1.25rem;
+}
+
+.answer-result-success {
+  animation: success-reveal 450ms ease-out;
+  border-color: #2e7892;
+}
+
+.discovery-card {
+  display: grid;
+  gap: 16px;
+  border: 3px solid #213430;
+  padding: 20px;
+  background: #fffdf7;
+  font-family: "Trebuchet MS", sans-serif;
+  line-height: 1.5;
+}
+
+.discovery-card .eyebrow,
+.discovery-card h2,
+.discovery-card p {
+  margin: 0;
+}
+
+.discovery-card h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.discovery-image {
+  display: block;
+  width: 100%;
+  border: 2px solid #213430;
+  background: #e7a84b;
+}
+
+.discovery-category {
+  color: #a64b2a;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.discovery-details {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.discovery-details div {
+  display: flex;
+  gap: 8px;
+}
+
+.discovery-details dt {
+  font-weight: 700;
+}
+
+.discovery-details dd {
+  margin: 0;
+}
+
+.discovery-facts {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.discovery-surprise {
+  border-left: 4px solid #d85d35;
+  padding-left: 12px;
+  font-weight: 700;
+}
+
+.secondary-action {
+  border: 2px solid #213430;
+  background: transparent;
+  color: #213430;
+}
+
+.game-actions {
+  display: grid;
+  gap: 12px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+button:focus-visible {
+  outline: 3px solid #2e7892;
+  outline-offset: 3px;
+}
+
+@keyframes success-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .answer-result-success {
+    animation: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .app-shell {
+    padding: 40px;
+  }
+
+  .editor-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}

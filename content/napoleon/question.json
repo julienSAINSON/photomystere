@@ -1,0 +1,120 @@
+{
+  "id": "napoleon",
+  "title": "A toi de jouer",
+  "category": "monde",
+  "image": "image.jpg",
+  "answer": "napoléon",
+  "acceptableAnswers": [
+    "Napoléon",
+    "Napoleon",
+    "Napoléon Bonaparte",
+    "Napoleon Bonaparte",
+    "Napoléon Ier",
+    "Napoleon Ier",
+    "Napoléon 1er",
+    "Napoleon 1er",
+    "Napoleon I",
+    "Bonaparte",
+    "Napolèon",
+    "Napoleom",
+    "Napoleón",
+    "Napoleon Bonapart",
+    "Napoléon Bonapart"
+  ],
+  "durationSeconds": 60,
+  "revealMode": "mosaic",
+  "zones": [
+    {
+      "type": "main",
+      "points": [
+        {
+          "x": 0.5632780082987552,
+          "y": 0.2911927916048569
+        },
+        {
+          "x": 0.5031120331950207,
+          "y": 0.2261414208010549
+        },
+        {
+          "x": 0.5300829875518672,
+          "y": 0.11889456623262458
+        },
+        {
+          "x": 0.6587136929460581,
+          "y": 0.09779682435031042
+        },
+        {
+          "x": 0.7313278008298755,
+          "y": 0.15054117905609582
+        },
+        {
+          "x": 0.7396265560165975,
+          "y": 0.20855996923245976
+        },
+        {
+          "x": 0.6836099585062241,
+          "y": 0.2824020658205593
+        }
+      ]
+    },
+    {
+      "type": "secondary",
+      "points": [
+        {
+          "x": 0.032157676348547715,
+          "y": 0.5373331135651888
+        },
+        {
+          "x": 0.18153526970954356,
+          "y": 0.39316521070270866
+        },
+        {
+          "x": 0.22302904564315354,
+          "y": 0.18394593703642656
+        },
+        {
+          "x": 0.229253112033195,
+          "y": 0.055601340585682106
+        },
+        {
+          "x": 0.45954356846473027,
+          "y": 0.11537827591890555
+        },
+        {
+          "x": 0.808091286307054,
+          "y": 0.24020658205593098
+        },
+        {
+          "x": 0.8516597510373444,
+          "y": 0.32811383989890663
+        },
+        {
+          "x": 0.7375518672199171,
+          "y": 0.49865392011427945
+        },
+        {
+          "x": 0.8848547717842323,
+          "y": 0.6094170649964288
+        },
+        {
+          "x": 0.8475103734439834,
+          "y": 0.7834734355255206
+        },
+        {
+          "x": 0.671161825726141,
+          "y": 0.9469809351134553
+        },
+        {
+          "x": 0.39730290456431533,
+          "y": 0.9346739190154387
+        },
+        {
+          "x": 0.011410788381742738,
+          "y": 0.6727102906433713
+        }
+      ]
+    }
+  ],
+  "hints": [],
+  "explanation": "Napoléon Bonaparte est représenté à cheval en train de franchir les Alpes, dans un célèbre tableau peint par Jacques-Louis David. Le peintre a voulu montrer Napoléon comme un chef courageux et puissant, même si la scène est plus héroïque que réaliste. Le tableau a été réalisé au début des années 1800."
+}

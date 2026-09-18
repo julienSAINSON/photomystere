@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="title description">
+  <title id="title">Illustration de la tour Eiffel</title>
+  <desc id="description">Une tour de fer stylisee devant un ciel clair.</desc>
+  <rect width="600" height="800" fill="#9bd1df" />
+  <circle cx="470" cy="120" r="54" fill="#f7d76c" />
+  <path d="M0 610C110 555 180 590 280 540C390 485 490 535 600 475V800H0Z" fill="#75a864" />
+  <path d="M86 800L255 238H345L514 800H438L300 360L162 800Z" fill="#293b48" />
+  <path d="M171 568H429V606H171Z" fill="#d8e0e3" />
+  <path d="M214 438H386V470H214Z" fill="#d8e0e3" />
+  <path d="M262 310H338V334H262Z" fill="#d8e0e3" />
+  <path d="M300 146L340 250H260Z" fill="#293b48" />
+  <path d="M280 576H320V800H280Z" fill="#1b2a34" />
+  <path d="M100 800Q300 640 500 800" fill="none" stroke="#1b2a34" stroke-width="20" />
+</svg>
